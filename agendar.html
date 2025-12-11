@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de salud y Bienestar - Agendar hora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body data-page="agendar">
+  <!-- data-page permite al JavaScript compartir dinámicas específicas de esta pestaña de reservas. -->
+  <div class="layout">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand__logo">
+          <!-- Inserta aquí el logo definitivo: <img src="/ruta/logo.svg" alt="Centro de salud y Bienestar" /> -->
+        </div>
+        <div class="brand__text">
+          <span>Centro de salud y</span>
+          <span class="brand__text--bold">Bienestar</span>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <a data-nav-target="home" href="./home.html#inicio">Inicio</a>
+        <a data-nav-target="valores" href="./valores.html">Valores</a>
+        <a data-nav-target="quienes" href="./quienes.html">¿Quiénes somos?</a>
+        <a data-nav-target="agendar" href="./agendar.html">Agendar hora</a>
+        <a data-nav-target="ingresar" href="./ingreseAqui.html">Ingresar</a>
+      </nav>
+    </header>
+
+     <div id="registro-container" style="display:none;">
+      <main class="booking">
+        <header class="booking__intro">
+          <span class="booking__tag">Agenda en minutos</span>
+          <h1>Elige a tu kinesiólogo y reserva en línea</h1>
+          <p>
+            Selecciona al especialista ideal para tu objetivo y revisa los horarios disponibles para tu próxima sesión.
+            <!-- Puedes ajustar este texto introductorio para comunicar promociones o anuncios específicos. -->
+          </p>
+        </header>
+
+      <section class="booking__shell">
+          <!-- Ajusta el fondo y los bordes de este contenedor en home.css dentro de .booking__shell. -->
+          <aside class="booking__sidebar">
+            <div class="booking__sidebar-head">
+              <span class="booking__category">Kinesiología</span>
+              <p>Explora nuestro equipo y selecciona a quien acompañará tu proceso.</p>
+            </div>
+
+           <ul class="booking__list" role="tablist" data-professional-list>
+              <li class="booking__list-placeholder" data-professional-placeholder>
+                <div class="booking-card booking-card--placeholder" aria-live="polite">
+                  <span class="booking-card__loader" aria-hidden="true"></span>
+                  <span class="booking-card__info">
+                      <strong>Sincronizando agenda en tiempo real…</strong>
+                    <span>En segundos verás a los especialistas con horarios actualizados</span>
+                  </span>
+                </div>
+                <p class="booking__placeholder-help">
+                  ¿Prefieres agendar de inmediato? Escríbenos a
+                  <a href="https://wa.me/56912345678" target="_blank" rel="noopener">WhatsApp</a>
+                  o llama al <a href="tel:+56212345678">+56 2 1234 5678</a> y coordinamos por ti.
+                </p>
+              </li>
+            </ul>
+            <!-- Reemplaza las fotos de los profesionales modificando las clases .booking-card__avatar--nombre en home.css -->
+          </aside>
+
+        <article class="booking__profile" aria-live="polite">
+            <div class="booking__profile-header">
+              <div class="booking__profile-photo booking__profile-photo--lissette" aria-hidden="true"></div>
+              <!-- Cambia la imagen principal del perfil editando la clase .booking__profile-photo--lissette en home.css -->
+              <div class="booking__profile-info">
+                <div class="booking__profile-meta">
+                  <span class="booking__profile-specialty" data-profile-role>Rehabilitación musculoesquelética</span>
+                  <div class="booking__profile-tags" data-profile-tags>
+                    <span>Deportivo</span>
+                    <span>Dolor crónico</span>
+                    <span>Telemedicina</span>
+                  </div>
+                </div>
+                <h2 data-profile-name>Lissette Manríquez</h2>
+                <p data-profile-bio>
+                  Me dedico a la rehabilitación y prevención de lesiones musculoesqueléticas, promoviendo el ejercicio
+                  terapéutico personalizado con seguimiento digital y acompañamiento constante.
+                </p>
+              </div>
+   <div class="booking__profile-body">
+              <section class="booking__sessions" aria-label="Planes disponibles">
+                <h3>Selecciona un servicio</h3>
+                <div class="booking__session-grid" data-session-grid>
+                  <article class="session-card">
+                    <div class="session-card__info">
+                      <h4>1 sesión de kinesiología</h4>
+                      <span>45 minutos</span>
+                    </div>
+                    <strong class="session-card__price">$25.000</strong>
+                    <button class="session-card__action" type="button">Ver horarios</button>
+                  </article>
+                  <article class="session-card">
+                    <div class="session-card__info">
+                      <h4>Recovery</h4>
+                      <span>Sesión 55 minutos</span>
+                    </div>
+                    <strong class="session-card__price">$35.000</strong>
+                    <button class="session-card__action" type="button">Ver horarios</button>
+                  </article>
+                  <article class="session-card">
+                    <div class="session-card__info">
+                      <h4>Plan semanal 3 sesiones</h4>
+                      <span>Duración 1 hora</span>
+                    </div>
+                    <strong class="session-card__price">$75.000</strong>
+                    <button class="session-card__action" type="button">Ver horarios</button>
+                  </article>
+                  <article class="session-card">
+                    <div class="session-card__info">
+                      <h4>Evaluación kinesiológica</h4>
+                      <span>Consulta inicial</span>
+                    </div>
+                    <strong class="session-card__price">$15.000</strong>
+                    <button class="session-card__action" type="button">Ver horarios</button>
+                  </article>
+                </div>
+                <!-- Personaliza los planes y precios usando app.js o editando directamente este bloque -->
+              </section>
+         <section class="booking__help">
+                <h3>¿Necesitas orientación?</h3>
+                <p>
+                  Si tienes dudas sobre qué profesional elegir, contáctanos y te guiaremos según tu diagnóstico.
+                  <!-- Sustituye este texto con un mensaje comercial o número telefónico de contacto -->
+                </p>
+                <a class="booking__help-link" href="mailto:contacto@kine.cl">Escríbenos a contacto@kine.cl</a>
+              </section>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div id="agendar-directo" style="display:none;" class="booking-direct">
+      <section class="booking__shell">
+        <div class="booking__profile">
+          <div class="booking__profile-body">
+            <h3>Bienvenido, <span id="nombrePaciente"></span></h3>
+            <p>RUT: <span id="rutPaciente"></span></p>
+            <p>Email: <span id="emailPaciente"></span></p>
+            <!-- Aquí va el calendario u opciones de agendar hora -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <section class="kine-directory" data-kine-directory>
+    <aside class="kine-directory__sidebar">
+      <div class="kine-directory__sidebar-head">
+        <p class="kine-directory__eyebrow">Equipo</p>
+        <h3>Kinesiología</h3>
+        <p class="kine-directory__hint">Selecciona un profesional para ver su perfil y datos de contacto.</p>
+      </div>
+      <div class="kine-directory__list" data-kine-list aria-live="polite">
+        <div class="kine-directory__placeholder">
+          <span class="kine-directory__spinner" aria-hidden="true"></span>
+          <div>
+            <p>Cargando equipo en tiempo real…</p>
+            <small>Conectando con el backend para obtener la agenda.</small>
+          </div>
+        </div>
+        </div>
+    </aside>
+    <article class="kine-directory__detail" data-kine-detail aria-live="polite">
+  <!-- Estado vacío inicial -->
+  <div class="kine-directory__empty" data-kine-empty>
+    <p>Selecciona un profesional para ver su información.</p>
+  </div>
+
+  <!-- Perfil del profesional -->
+  <div class="kine-directory__profile" data-kine-profile hidden>
+    <div class="kine-directory__profile-head">
+      <div class="kine-directory__avatar" data-kine-avatar aria-hidden="true"></div>
+      <div>
+        <p class="kine-directory__role" data-kine-specialty></p>
+        <h2 data-kine-name></h2>
+        <div class="kine-directory__tags">
+          <span data-kine-box></span>
+          <span data-kine-rut></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kine-directory__bio">
+      <h3>Sobre mí</h3>
+      <p data-kine-description></p>
+    </div>
+
+    <div class="kine-directory__cards">
+      <div class="kine-card">
+        <p class="kine-card__label">Teléfono</p>
+        <p class="kine-card__value" data-kine-phone></p>
+        <a class="kine-card__action" data-kine-phone-link>Contactar</a>
+      </div>
+      <div class="kine-card">
+        <p class="kine-card__label">Correo</p>
+        <p class="kine-card__value" data-kine-email></p>
+        <a class="kine-card__action" data-kine-email-link>Enviar correo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Horarios -->
+  <div class="kine-directory__slots" data-kine-slots>
+    <p class="kine-directory__slots-empty">
+      Selecciona un profesional para ver sus horarios disponibles.
+    </p>
+  </div>
+</article>
+  </section>
+  <!-- Define la URL base de la API antes del script principal. -->
+<script src="./api.js" type="module"></script>
+<script src="./request.js" type="module"></script>
+<script src="./app.js" type="module"></script>
+  </body>
+  </html>
