@@ -3699,3 +3699,180 @@ kine-directory__eyebrow {
   color: #02261f;
   font-weight: 600;
 }
+
+
+/* ---------- Tratamientos (servicios) ---------- */
+
+.kine-services {
+  margin-top: 2rem;
+}
+
+.kine-services__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e9fdf6;
+  margin-bottom: 0.75rem;
+}
+
+.kine-services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(60, 255, 192, 0.5);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.65);
+}
+
+.service-card__name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.service-card__meta {
+  font-size: 0.8rem;
+  color: #b3d9cf;
+}
+
+.service-card__price {
+  margin-top: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #37f0a4;
+}
+
+.service-card__footer {
+  margin-top: 0.6rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.service-card__btn {
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: #27c995;
+  color: #00241a;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.service-card__btn:hover {
+  background: #2ff0aa;
+  transform: translateY(-1px);
+}
+
+/* ---------- Agenda semanal ---------- */
+
+.kine-slots {
+  margin-top: 2.2rem;
+}
+
+.kine-slots__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.kine-slots__title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #c5f9ea;
+}
+
+.kine-slots__body {
+  overflow-x: auto;
+  padding-bottom: 0.7rem;
+}
+
+.week-slots {
+  display: flex;
+  gap: 0.7rem;
+  min-height: 130px;
+}
+
+.week-day {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+  padding: 0.9rem 1rem;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.week-day__header {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f4fff9;
+}
+
+.week-day__empty {
+  font-size: 0.8rem;
+  color: #90ada4;
+}
+
+.week-day__slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.slot-pill {
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.78rem;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: transparent;
+  color: #eafff7;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, transform 0.12s ease;
+}
+
+.slot-pill:hover {
+  transform: translateY(-1px);
+  border-color: #37f0a4;
+}
+
+.slot-pill--selected {
+  background: #23d28c;
+  color: #021c18;
+  border-color: transparent;
+}
+
+.kine-slots__empty {
+  font-size: 0.85rem;
+  color: #8ba39c;
+}
+
+
+.site-nav__user {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+.identity-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

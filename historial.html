@@ -20,32 +20,35 @@
         </div>
       </div>
       <nav class="site-nav">
-        <a data-nav-target="home" href="./home.html#inicio">Inicio</a>
-        <a data-nav-target="valores" href="./valores.html">Valores</a>
-        <a data-nav-target="quienes" href="./quienes.html">¿Quiénes somos?</a>
-        <a data-nav-target="agendar" href="./agendar.html">Agendar hora</a>
-        <a data-nav-target="historial" href="./historial.html">Seguimiento</a>
-        <a data-nav-target="ingresar" href="./ingreseAqui.html">Ingresar</a>
-      </nav>
+  <a data-nav-target="home" href="./home.html#inicio">Inicio</a>
+  <a data-nav-target="valores" href="./valores.html">Valores</a>
+  <a data-nav-target="quienes" href="./quienes.html">¿Quiénes somos?</a>
+  <a data-nav-target="agendar" href="./agendar.html">Agendar hora</a>
+  <a data-nav-target="ingresar" href="./ingreseAqui.html" data-auth-link>
+    <span data-auth-label>Ingresar</span>
+    <span class="site-nav__user" data-auth-user>Invitado</span>
+  </a>
+</nav>
     </header>
 
     <main class="history" aria-labelledby="history-title">
       <aside class="history__sidebar" aria-label="Navegación del paciente">
-        <div class="history__profile">
-          <div class="history__avatar" aria-hidden="true"></div>
+      <div class="history__profile">
+        <div class="history__avatar" aria-hidden="true"></div>
           <div class="history__identity">
             <span class="history__label">Paciente</span>
-            <strong class="history__name">Valentina Rojas</strong>
-            <p class="history__role">Rehabilitación musculoesquelética</p>
+            <strong class="history__name" data-profile-name>Valentina Rojas</strong>
+            <p class="history__role" data-profile-subtitle>Rehabilitación musculoesquelética</p>
           </div>
-        </div>
-        <nav class="history__menu" aria-label="Secciones de la cuenta">
-          <a class="history__menu-link" href="#">Perfil</a>
-          <a class="history__menu-link is-active" href="./historial.html" aria-current="page">Historial</a>
-          <a class="history__menu-link" href="#">Videos de apoyo</a>
-        </nav>
-        <p class="history__help">Puedes revisar cómo avanza tu tratamiento y los próximos controles en esta sección.</p>
-      </aside>
+      </div>
+  <nav class="history__menu" aria-label="Secciones de la cuenta">
+    <a class="history__menu-link is-active" href="./historial.html" aria-current="page">Perfil</a>
+    <a class="history__menu-link" href="#">Historial</a>
+    <a class="history__menu-link" href="#">Videos de apoyo</a>
+  </nav>
+  <p class="history__help">
+    Puedes revisar tus datos y el avance de tu tratamiento en esta sección.
+  </p>
 
       <section class="history__content">
         <header class="history__header">
